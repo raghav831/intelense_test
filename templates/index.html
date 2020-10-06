@@ -12,17 +12,21 @@
     <title>Live Streaming Demonstration</title>
 </head>
 <body>
+<h3>Live Streaming</h3>
 <style>
 #row{
     display: block;
+    position: relative;
+    margin-left: auto;
+    margin-top: auto;
+    padding: 2px 2px 2px 2px;
 }
 </style>
 <div id="addhere">
     <div class="container">
         <div class="row">
             <div class="col-lg-8  offset-lg-2">
-                <h3 class="mt-5">Live Streaming</h3>
-                <img src="{{ url_for('video_feed') }}" width="20%">
+                <img src="{{ url_for('video_feed') }}" width="40%">
             </div>
         </div>
     </div>
@@ -32,7 +36,7 @@
         var $mylist;
         var $userInput=prompt("Enter number of screens","<Enter here>");
         var $div_ele=document.createElement("div");
-        $div_ele.innerHTML='<div class="row"><div class="col-lg-8  offset-lg-2"><h3 class="mt-5">Live Streaming</h3><img src=\"video_feed\" width="20%"/></div></div>';
+        $div_ele.innerHTML='<div class="row"><div class="col-lg-8  offset-lg-2"><img src=\"video_feed\" width="40%"/></div></div>';
         for(i=1;i<$userInput;i++){
             document.getElementById("addhere").appendChild($div_ele.cloneNode(true))
             console.log(i)
